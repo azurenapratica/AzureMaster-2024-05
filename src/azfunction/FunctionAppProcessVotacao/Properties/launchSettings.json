@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "FunctionAppProcessVotacao": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7211"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "DockerfileRunArguments": "--init",
+      "httpPort": 34683,
+      "useSSL": false
+    }
+  }
+}
