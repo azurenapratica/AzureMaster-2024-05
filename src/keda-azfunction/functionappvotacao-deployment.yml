@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: functionappvotacao
+spec:
+  selector:
+    matchLabels:
+      app: functionappvotacao
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: functionappvotacao
+    spec:
+      containers:
+      - name: functionappvotacao
+        image: renatogroffe/azfunctions-dotnet8-sql-eventhubs-pesquisainteresses:latest
+        env:
+        - name: APPLICATIONINSIGHTS_CONNECTION_STRING 	
+          valueFrom:
+            secretKeyRef:
+              name: functionappvotacaosecret
+              key: ConnectionAppInsights
+        - name: EventHubsConnectionString
+          valueFrom:
+            secretKeyRef:
+              name: functionappvotacaosecret
+              key: ConnectionAzureEventHubs
+        - name: AzureWebJobsStorage
+          valueFrom:
+            secretKeyRef:
+              name: functionappvotacaosecret
+              key: ConnectionAzureStorage
+        - name: BaseVotacaoConnectionString
+          valueFrom:
+            secretKeyRef:
+              name: functionappvotacaosecret
+              key: ConnectionSqlServer

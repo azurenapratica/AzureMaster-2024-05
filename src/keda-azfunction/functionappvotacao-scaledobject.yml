@@ -1,0 +1,22 @@
+# Informações sobre uso do Azure Event Hubs com KEDA
+# https://keda.sh/docs/2.14/scalers/azure-event-hub/
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: functionappvotacao-scaledobject
+spec:
+  scaleTargetRef:
+    name: functionappvotacao
+  pollingInterval: 30
+  minReplicaCount: 1
+  maxReplicaCount: 10
+  triggers:
+  - type: azure-eventhub
+    metadata:
+      connectionFromEnv: EventHubsConnectionString
+      storageConnectionFromEnv: AzureWebJobsStorage
+      eventHubName: testevotacao0
+      consumerGroup: functions
+      unprocessedEventThreshold: '10'
+      activationUnprocessedEventThreshold: '1'
+      checkpointStrategy: azureFunction
