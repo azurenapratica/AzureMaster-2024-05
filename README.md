@@ -14,7 +14,7 @@ Palestrantes:
 
 Número de participantes: **87 pessoas (pico de audiência ao longo da live)**
 
-Tecnologias abordadas: **Docker, Kubernetes, Azure App Service, Azure Functions, Azure Container Apps, Azure Container Instances, Azure Kubernetes Service, Linux, Azure Event Hubs, Application Insights, .NET, ASP.NET Core...w**
+Tecnologias abordadas: **Docker, Kubernetes, Azure App Service, Azure Functions, Azure Container Apps, Azure Container Instances, Azure Kubernetes Service, Linux, Azure Event Hubs, Application Insights, .NET, ASP.NET Core...**
 
 ---
 
