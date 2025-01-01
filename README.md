@@ -6,7 +6,9 @@ Organizadores:
 - **Bruno Maia**
 - **Renato Groffe (Microsoft MVP, MTAC)**
 
-Título da apresentação: **Containerização no Azure: serviços, aplicações, arquitetura...**
+Apresentações:
+1) **Containerização no Azure: serviços, aplicações, arquitetura...**
+2) **Azure + Containers na prática**
 
 Palestrantes:
 - **Renato Groffe (Microsoft MVP, MTAC)**
